@@ -2,12 +2,110 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{% block title %}Financialed!{% endblock %}</title>
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        {% block stylesheets %}
+            <!-- Bootstrap -->
+            <link href="{{ asset('assets/vendor/css/bootstrap.css') }}" rel="stylesheet">
+            <!-- Font Awesome -->
+            <link href="{{ asset('assets/vendor/css/font-awesome.css') }}" rel="stylesheet">
+            <!-- Custom Theme Style -->
+            <link href="{{ asset('assets/vendor/css/gentelella-app.css') }}" rel="stylesheet">
+        {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body class="nav-md">
+        <div class="container body">
+            <div class="main_container">
+                <div class="col-md-3 left_col">
+                    <div class="left_col scroll-view">
+                        <div class="navbar nav_title" style="border: 0;">
+                            <a href="#" class="site_title"><i class="fa fa-paw"></i>
+                                <span>Financialed!</span>
+                            </a>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <!-- menu profile quick info -->
+                        <div class="profile">
+                            <div class="profile_pic">
+                                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                            </div>
+                            <div class="profile_info">
+                                <span>Welcome,</span>
+                                <h2>John Doe</h2>
+                            </div>
+                        </div>
+                        <!-- /menu profile quick info -->
+
+                        <br />
+
+                        <!-- sidebar menu -->
+                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                            <div class="menu_section">
+                            {% block sidebarmenu %}{% endblock %}
+                            </div>
+                        </div>
+                        <!-- /sidebar menu -->
+
+                        <!-- /menu footer buttons -->
+                        <div class="sidebar-footer hidden-small">
+                            <a data-toggle="tooltip" data-placement="top" title="Settings">
+                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Lock">
+                                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Logout">
+                                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                        <!-- /menu footer buttons -->
+                    </div>
+                </div>
+
+                <!-- top navigation -->
+                <div class="top_nav">
+                    <div class="nav_menu">
+                        <nav class="" role="navigation">
+                            {% block topnavigation %}
+                            <div class="nav toggle">
+                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                            </div>
+                            {% endblock %}
+                            <ul class="nav navbar-nav navbar-right"></ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- /top navigation -->
+
+                <!-- page content -->
+                <div class="right_col" role="main">
+                    {% block maincontent %}{% endblock %}
+                </div>
+                <!-- /page content -->
+
+                <!-- footer content -->
+                <footer>
+                    {% block footercontent %}
+                    <div class="pull-right">
+                        Financialed
+                    </div>
+                    <div class="clearfix"></div>
+                    {% endblock %}
+                </footer>
+                <!-- /footer content -->
+            </div>
+        </div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
