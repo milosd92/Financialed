@@ -27,6 +27,11 @@ gulp.task('scripts', function () {
         './web/bower_components/gentelella/vendors/jquery/dist/jquery.js'
     ]).pipe(gulp.dest('./web/assets/vendor/js'));
 
+    // Bootstrap
+    gulp.src([
+        './web/bower_components/gentelella/vendors/bootstrap/dist/js/bootstrap.js'
+    ]).pipe(gulp.dest('./web/assets/vendor/js'));
+
     // Application-custom
     return gulp.src([
         './web/bower_components/gentelella/src/js/custom.js',
