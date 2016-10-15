@@ -112,6 +112,9 @@
                 <!-- /footer content -->
             </div>
         </div>
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('assets/vendor/js/jquery.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/vendor/js/gentelella-app.js') }}"></script>
+        {% endblock %}
     </body>
 </html>

@@ -22,6 +22,11 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function () {
 
+    // jQuery
+    gulp.src([
+        './web/bower_components/gentelella/vendors/jquery/dist/jquery.js'
+    ]).pipe(gulp.dest('./web/assets/vendor/js'));
+
     // Application-custom
     return gulp.src([
         './web/bower_components/gentelella/src/js/custom.js',
@@ -33,7 +38,7 @@ gulp.task('fonts', function () {
 
     // Font awesome
     gulp.src([
-        './web/bower_components/gentelella/vendors/font-awesome/fonts/fontawesome-webfont.*',
+        './web/bower_components/gentelella/vendors/font-awesome/fonts/fontawesome-webfont.*'
     ]).pipe(gulp.dest('./web/assets/vendor/fonts'));
 
     // Glyphicons
