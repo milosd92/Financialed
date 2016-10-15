@@ -29,4 +29,17 @@ gulp.task('scripts', function () {
     ]).pipe(concat('gentelella-app.js')).pipe(gulp.dest('./web/assets/vendor/js'));
 });
 
-gulp.task('default', ['styles', 'scripts']);
+gulp.task('fonts', function () {
+
+    // Font awesome
+    gulp.src([
+        './web/bower_components/gentelella/vendors/font-awesome/fonts/fontawesome-webfont.*',
+    ]).pipe(gulp.dest('./web/assets/vendor/fonts'));
+
+    // Glyphicons
+    return gulp.src([
+        './web/bower_components/gentelella/vendors/bootstrap/fonts/glyphicons-halflings-regular.*'
+    ]).pipe(gulp.dest('./web/assets/vendor/fonts'));
+});
+
+gulp.task('default', ['styles', 'scripts', 'fonts']);
