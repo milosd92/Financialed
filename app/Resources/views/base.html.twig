@@ -26,7 +26,7 @@
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0;">
                             <a href="#" class="site_title"><i class="fa fa-paw"></i>
-                                <span>Financialed!</span>
+                                <span>Financialed</span>
                             </a>
                         </div>
 
@@ -34,8 +34,13 @@
 
                         <!-- menu profile quick info -->
                         <div class="profile">
-                            <div class="profile_pic"></div>
-                            <div class="profile_info"></div>
+                            <div class="profile_pic">
+                                <img src="" alt="user-images" class="img-circle profile_img">
+                            </div>
+                            <div class="profile_info">
+                                <span>Welcome,</span>
+                                <h2>John Doe</h2>
+                            </div>
                         </div>
                         <!-- /menu profile quick info -->
 
@@ -68,16 +73,23 @@
                     </div>
                 </div>
 
+
                 <!-- top navigation -->
                 <div class="top_nav">
                     <div class="nav_menu">
                         <nav class="" role="navigation">
-                            {% block topnavigation %}
                             <div class="nav toggle">
                                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                             </div>
-                            {% endblock %}
-                            <ul class="nav navbar-nav navbar-right"></ul>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="">
+                                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        <img src="" alt="user-image">John Doe
+                                        <span class="fa fa-angle-down"></span>
+                                    </a>
+                                </li>
+                            </ul>
                         </nav>
                     </div>
                 </div>
