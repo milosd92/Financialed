@@ -40,7 +40,7 @@
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
-                        <h2>John Doe</h2>
+                        <h2>{{ appstate.user }}</h2>
                     </div>
                 </div>
                 <!-- /menu profile quick info -->
@@ -87,7 +87,7 @@
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                                aria-expanded="false">
-                                <img src="{{ asset('assets/images/user.png') }}" alt="user-image">John Doe
+                                <img src="{{ asset('assets/images/user.png') }}" alt="user-image">{{ appstate.user }}
                                 <span class="fa fa-angle-down"></span>
                             </a>
                         </li>
